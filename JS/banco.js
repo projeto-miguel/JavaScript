@@ -4,60 +4,97 @@ const prompt = ps()
 let i = 0
 let u1 = {
     id: 1,
-    nome: "José",
-    senha: "1111",
-    saldo: 2500
+    name: "Jose",
+    passw: "1111",
+    cash: 2500
 }
-let u2 = {
-    id: 10,
-    nome: "Maria",
-    senha: "4321",
-    saldo: 1300
-}
-let u3 = {
-    id: 11,
-    nome: "Roberto",
-    senha: "1234",
-    saldo: 5000
-}
-let usuarios = [u1,u2,u3]
+let opc = 0
 
 
-
-function login(){
-    let nome = ""
-    let senha = ""
-    let nao_encontrado = 0
+function Login(){
+    let user_i = ""
+    let passw_i = ""
+    let error = 0
     let login = false
+    console.log("BEM-VINDO AO BANCO DO BARASIL\n-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-")
     while(login == false){  
-        console.log("BEM-VINDO AO BANCO DO BARASIL\n-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-")
         console.log("REALIZE O LOGIN PARA PROSSEGUIR: ")
-        nome = prompt("Nome: ")
-        senha = prompt("Senha: ")
-        for(i=0;i<usuarios.length;i++){
-            if(nome!=usuarios[i].nome){
-                nao_encontrado++
-            }
-            if(nao_encontrado>=usuarios.length){
-                console.log("USUARIO NAO ENCONTRADO")
-            }else if((nome==usuarios[i].nome) && (senha==usuarios[i].senha)){
-                login=true
-            }
-        }   
-    }
+        user_i = prompt("Usuario: ")
+        passw_i = prompt("Senha: ")
+        if(user_i!=u1.name || passw_i!=u1.passw){
+            console.clear()
+            console.log("USUARIO OU SENHA INCORRETOS")
+            error++
+        }else{
+            console.clear()
+            login = true
+        }
+    }    
     console.log("LOGIN BEM-SUCEDIDO")
+    console.log("Bem-vindo",user_i+"!")
+    return user_i
 }
 function Menu(){
-    console.log("Bem-vindo", + "!Escolha qual operação deseja fazer: ")
-    console.log("")
-    console.log()
-    console.log()
-    console.log()
-    console.log()
-
+    console.log("Escolha qual operação deseja fazer pelo número: ")
+    console.log("1 - VERIFICAR SALDO")
+    console.log("2 - SAQUE")
+    console.log("3 - DEPOSITO")
+    console.log("4 - SAIR")
 }
-login()
+
+function Saldo(){
+    console.clear()
+    console.log("Seu saldo na conta corrente é: ")
+    console.log("R$",u1.cash)
+}
+
+function Saque(){
+    console.clear()
+    let value = Number(prompt("Digite o valor que deseja sacar de sua conta corrente: "))
+    u1.cash = u1.cash - value
+    console.log("Operação bem-sucedida.")
+}
+function Deposito(){
+    console.clear()
+    let value = Number(prompt("Digite o valor que deseja depositar em sua conta corrente: "))
+    u1.cash = u1.cash + value
+    console.log("Operação bem-sucedida.")
+}
+
+
+logged_user = Login()
+while(opc!=4){
+    Menu()
+    opc = Number(prompt())
+    if(opc==1){
+        Saldo()
+    }
+    if(opc==2){
+        Saque()
+    }
+    if(opc==3){
+        Deposito()
+    }
+}
+
+
+
 /*
 while(true){
     login()
 }*/
+/*
+for(i=0;i<usuarios.length;i++){
+    if(nome!=usuarios[i].nome){
+        nao_encontrado++
+    }
+    else if((nome==usuarios[i].nome) && (senha==usuarios[i].senha)){
+        login=true
+    }
+} 
+if (nao_encontrado>=usuarios.length){
+    console.log("USUARIO OU SENHA INCORRETOS.")
+    console.clear()
+}
+}
+*/
