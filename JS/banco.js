@@ -1,7 +1,6 @@
 const ps = require('prompt-sync')
 const prompt = ps()
 
-let i = 0
 let u1 = {
     id: 1,
     name: "Jose",
@@ -77,24 +76,3 @@ while(opc!=4){
     }
 }
 
-
-
-/*
-while(true){
-    login()
-}*/
-/*
-for(i=0;i<usuarios.length;i++){
-    if(nome!=usuarios[i].nome){
-        nao_encontrado++
-    }
-    else if((nome==usuarios[i].nome) && (senha==usuarios[i].senha)){
-        login=true
-    }
-} 
-if (nao_encontrado>=usuarios.length){
-    console.log("USUARIO OU SENHA INCORRETOS.")
-    console.clear()
-}
-}
-*/
