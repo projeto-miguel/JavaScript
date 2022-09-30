@@ -1,4 +1,4 @@
-CREATE TABLE banco_do_barasil;
+CREATE DATABASE banco_do_barasil;
 USE banco_do_barasil;
 
 CREATE TABLE clientes (
