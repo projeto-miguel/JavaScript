@@ -196,7 +196,7 @@ class RPG{
             novo_jogador.info();
         }else if(escolha==4){
             Console.Clear();
-            Console.WriteLine("Classe escolhida: Caçador de Recompensas.");
+            Console.WriteLine("Classe escolhida: Principe.");
             Console.WriteLine("\nDigite o nome de seu personagem: ");
             nome = Console.ReadLine();
             Console.WriteLine("\nDigite a idade de seu personagem: ");
@@ -212,7 +212,7 @@ class RPG{
         
         }else if(escolha==5){
             Console.Clear();
-            Console.WriteLine("Classe escolhida: Arqueiro.");
+            Console.WriteLine("Classe escolhida: Gladiador.");
             Console.WriteLine("\nDigite o nome de seu personagem: ");
             nome = Console.ReadLine();
             Console.WriteLine("\nDigite a idade de seu personagem: ");
