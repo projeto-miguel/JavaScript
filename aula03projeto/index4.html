@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/estilo.css">
+    <title>Industria 4.0</title>
+</head>
+<body>
+    <script>
+        document.addEventListener('keydown', function (event){
+            if(event.key === '>'){
+                document.getElementById("prox").click()
+            }
+            if(event.key === '<'){
+                document.getElementById("ant").click()
+            }
+        });
+
+        function ProxPagina(link){
+            window.location.href = "index5.html"
+        }
+        function AntPagina(link){
+            window.location.href = "index3.html"
+        }
+    </script>
+    <header>
+        <nav>
+            <ul>
+                <li><a href="#" id="ant" onclick="AntPagina(this)">Anterior</a></li>
+                <li><a href="#" id="prox" onclick="ProxPagina(this)">Próxima</a></li>
+            </ul>
+        </nav>
+    
+
+    </header>
+    <div class="container">
+        <h1>Mapa mental</h1>
+        <figure>
+            <img src="img/industria_4.jpg" alt="">
+        </figure>
+        <h1>Conclusão</h1>
+        <p>Os gestores precisam considerar as vantagens e desvantagens da Indústria 4.0 ao criar um plano de ação para se adequar às mudanças. Apesar dos desafios que ainda precisam ser enfrentados, é sempre importante lembrar que as revoluções anteriores trouxeram sucesso para os negócios — além de modernizações que impactaram as relações de consumo e a sociedade como um todo.</p>
+
+    </div>
+    
+</body>
+</html>
