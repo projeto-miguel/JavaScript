@@ -17,5 +17,4 @@ function CalcularImc(){
     else if(imc>=39.9){
         alert("Você está com obesidade mórbida com o IMC: " + imc)
     }
-    document.getElementById('res').innerHTML = resultado
 }
