@@ -10,3 +10,5 @@ https://projeto-miguel.github.io/JavaScript/calcular_graus
 https://projeto-miguel.github.io/JavaScript/testejs2
 <h2>Laço de repetição</h2>
 https://projeto-miguel.github.io/JavaScript/tabuada
+<h2>Trocar imagens</h2>
+https://projeto-miguel.github.io/JavaScript/imagens
