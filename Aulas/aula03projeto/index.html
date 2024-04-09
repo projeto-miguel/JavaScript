@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/estilo.css">
+    <title>Industria 4.0</title>
+</head>
+<body>
+    <script>
+        document.addEventListener('keydown', function (event){
+        if(event.key === '>'){
+            document.getElementById("prox").click()
+        }
+        if(event.key === '<'){
+            document.getElementById("ant").click()
+        }
+        });
+
+        function ProxPagina(link){
+            window.location.href = 'index2.html'
+        }
+    </script>
+    <header>
+        <nav>
+            <ul>
+                <li><a href="#" id="prox" onclick="ProxPagina(this)">Próxima</a></li>
+            </ul>
+        </nav>
+    </header>
+    <div class="container">
+        <h1>Introdução</h1>
+        <p>Este site vai abordar a Quarta Revolução Industrial, também conhecida como Indústria 4.0. Falaremos sobre o conceito, a definição, as consequências positivas e negativas e por fim um mapa mental que vai resumir e facilitar a compreensão do assunto.</p>
+        <h2>Para alternar entre as páginas, use os botões no topo da página ou use as teclas > e <</h2>
+    </div>
+    <footer>
+        <p>Desenvolvido por Miguel Carneiro</p>
+    </footer>
+</body>
+</html>
